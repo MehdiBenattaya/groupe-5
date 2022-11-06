@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../../ressources/icons8-chercher-100.png</file>
+        <file>../../ressources/icons8-modifier-100.png</file>
+        <file>../../ressources/icons8-plus-2-mathématique-48.png</file>
+        <file>../../ressources/icons8-statistiques-100.png</file>
+        <file>../../ressources/icons8-supprimer-pour-toujours-100.png</file>
+        <file>../../ressources/icons8-visible-48.png</file>
+        <file>../../LOGOS/large (3).png</file>
+        <file>../../LOGOS/Logo final.png</file>
+    </qresource>
+</RCC>
