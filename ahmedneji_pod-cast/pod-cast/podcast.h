@@ -7,7 +7,7 @@ class Podcast
 {
 public:
     Podcast();
-    Podcast(int,QString,int,QString,QString,QString,QString);
+    Podcast(int,QString,int,QString,QString,QString,QString,QString,QString);
     int getid();
     int getnmbdeparticipants();
     QString getscript();
@@ -15,6 +15,8 @@ public:
     QString getdate();
     QString getheure();
     QString getsujet();
+    QString getcategorie();
+    QString getaudio();
     void setid(int);
     void setnmbdeparticipants(int);
     void setscript(QString);
@@ -22,10 +24,19 @@ public:
     void setdate(QString);
     void setheure(QString);
     void setsujet(QString);
+    void setcategorie(QString);
+    void setaudio(QString);
     bool ajouter();
     QSqlQueryModel* afficher();
     bool supprimer(int);
-
+    QSqlQueryModel * tri();
+    QSqlQueryModel * tri_sujet();
+    bool modifier();
+    QSqlQueryModel * rechercher(int);
+    QSqlQueryModel *rechercher_sujet(QString);
+    QSqlQueryModel *rechercher_date(QString);
+    QSqlQueryModel * triercategorie(QString);
+    void genererPDFact();
 
 
 
@@ -33,7 +44,7 @@ public:
 private:
     int id;
     int nmbdeparticipants;
-    QString script, duree, date, heure,sujet;
+    QString script, duree, date, heure,sujet,categorie,audio;
 
 };
 
