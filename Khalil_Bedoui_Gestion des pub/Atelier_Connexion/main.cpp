@@ -11,13 +11,16 @@ int main(int argc, char *argv[])
     bool test=c.createconnection();
     MainWindow w;
 
+    //w. setFixedSize(434,122);
+    w.setWindowTitle("Temperature Sensor");
+    w.show();
+
     if(test)
     {
         w.show();
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
-
 }
     else
         QMessageBox::critical(nullptr, QObject::tr("database is not open"),

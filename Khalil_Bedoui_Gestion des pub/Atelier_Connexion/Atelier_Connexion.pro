@@ -3,7 +3,14 @@
 # Project created by QtCreator 2018-10-26T21:45:23
 #
 #-------------------------------------------------
+QT += multimedia
+QT += multimediawidgets
+QT += printsupport
 
+QT +=network
+QT +=svg
+
+QT       += core gui serialport
 QT       += core gui sql \
     quick
 
@@ -26,15 +33,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    arduino.cpp \
+    mail.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
-    pub.cpp
+    pub.cpp \
+    qrcode.cpp
 
 HEADERS += \
+    arduino.h \
+    mail.h \
         mainwindow.h \
     connection.h \
-    pub.h
+    pub.h \
+    qrcode.h
 
 FORMS += \
         mainwindow.ui
@@ -43,3 +56,9 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    image.qrc
+
+DISTFILES += \
+    ../Cloud FM.png

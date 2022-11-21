@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../../../Downloads/reglages.png</file>
+        <file>../../../Downloads/interdire.png</file>
+        <file>../../../Downloads/ajouter.png</file>
+        <file>../../../Downloads/rafraichir.png</file>
+        <file>../../../Downloads/editer.png</file>
+        <file>../../../Downloads/croix-cercle.png</file>
+        <file>../../../Downloads/chercher.png</file>
+        <file>../../../Downloads/document.png</file>
+        <file>../../../Downloads/play-alt.png</file>
+        <file>../../../Downloads/poubelle.png</file>
+        <file>../../../Downloads/trier-numerique-vers-le-bas.png</file>
+        <file>../../../Downloads/liste.png</file>
+        <file>../../../Downloads/plus.png</file>
+        <file>../Cloud FM.png</file>
+        <file>../../../Downloads/a.png</file>
+        <file>../../../Downloads/avion-en-papier.png</file>
+        <file>../../../Downloads/enveloppe.png</file>
+        <file>../../../Downloads/firefox-browser.png</file>
+        <file>../../../Downloads/enveloppe-telechargement.png</file>
+        <file>../../../Downloads/trier-numerique-vers-le-bas (1).png</file>
+        <file>../../../Downloads/sort-alt.png</file>
+        <file>../../../Downloads/qr-code.png</file>
+        <file>../../../Downloads/sort-alt (1).png</file>
+        <file>../../../Downloads/scan.png</file>
+    </qresource>
+</RCC>
