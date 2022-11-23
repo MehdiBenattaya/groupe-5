@@ -83,7 +83,7 @@ border: 1px solid red;
       <enum>QTabWidget::Triangular</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -768,7 +768,7 @@ background: white;</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QFrame" name="graphe">
+       <widget class="QFrame" name="graphe1">
         <property name="geometry">
          <rect>
           <x>9</x>
@@ -787,7 +787,11 @@ border: 1px solid gray;
 border-radius: 0px;
 background: white;</string>
         </property>
-        <layout class="QHBoxLayout" name="horizontalLayout"/>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="graphe"/>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QFrame" name="frame_7">

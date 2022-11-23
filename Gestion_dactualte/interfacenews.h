@@ -59,7 +59,7 @@ private slots:
     void on_graphebouton_clicked();
 
 
-    void total (int a,  int b, int c, int d, int e, int f, int  g,  int h);
+    QChartView *  total (int a,  int b, int c, int d, int e, int f, int  g,  int h);
 
 
     void on_trier_2_clicked();
@@ -67,6 +67,8 @@ private slots:
     void on_trier_3_clicked();
 
     void on_pushButton_8_clicked();
+
+    void clearLayout(QLayout *layout);
 
 private:
     Ui::interfacenews *ui;

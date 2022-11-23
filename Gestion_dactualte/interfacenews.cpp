@@ -6,7 +6,6 @@
 #include <QDate>
 #include <QIntValidator>
 #include <QDateEdit>
-#include <QFileDialog>
 #include <QByteArray>
 #include <QImage>
 #include <QBuffer>
@@ -21,11 +20,7 @@
 //include de files
 #include  <QDir>
 
-
-
-
-
-
+#include <QLayout>
 
 interfacenews::interfacenews(QWidget *parent) :
     QDialog(parent),
@@ -39,7 +34,9 @@ interfacenews::interfacenews(QWidget *parent) :
 
 //***graphe****
  int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0;
-total ( a,   b,  c,  d,  e,  f,   g,   h);
+//total ( a,   b,  c,  d,  e,  f,   g,   h);
+ clearLayout(ui->graphe);
+ ui->graphe->addWidget(total( a,   b,  c,  d,  e,  f,   g,   h));
 //***graphe****
 
 ui->listView->setModel(A.afficher());
@@ -60,6 +57,21 @@ interfacenews::~interfacenews()
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//************************
 
 
 // ----------------------------ajout-------------------------------------------
@@ -97,15 +109,22 @@ QString imageurl=ui->le_imgurl->text(); //copie  le path dans la  base de donné
 
 //***graphe****
  int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0;
-total ( a,   b,  c,  d,  e,  f,   g,   h);
+//total ( a,   b,  c,  d,  e,  f,   g,   h);
 //***graphe****
 
 
     Actualite A( id, Titre , lieu, date, source,categorie,description,imageurl);
 
+
+
+
     bool test=A.ajouter();
     if (test)
     { QMessageBox::information(nullptr, QObject::tr("OK"), QObject::tr("ajout effectué.\n" "Click Cancel to exit."), QMessageBox::Cancel);
+
+        clearLayout(ui->graphe);
+
+        ui->graphe->addWidget(total( a,   b,  c,  d,  e,  f,   g,   h));
 
         //****************ajout historique*********************
 
@@ -168,7 +187,8 @@ bool test=A1.supprimer(A1.getid());
 
 QMessageBox msgBox;
 if (test)
-    msgBox.setText("Suppression avec succes.");
+  {  msgBox.setText("Suppression avec succes.");
+}
    else
     msgBox.setText("Echec de suppression.") ;
 msgBox.exec();
@@ -449,8 +469,8 @@ void interfacenews::on_pushButton_11_clicked()
 
         if (valid)
         {
-            image= image.scaledToWidth(ui->le_image->width(),Qt::SmoothTransformation);
-            ui->le_image->setPixmap(QPixmap::fromImage(image));
+            image= image.scaledToWidth(ui->le_image_2->width(),Qt::SmoothTransformation);
+            ui->le_image_2->setPixmap(QPixmap::fromImage(image));
 
            ui->le_imgurl->setText(filename);
 
@@ -715,15 +735,28 @@ void interfacenews::on_histbouton_2_clicked()
 //------------------------------graphe actualiser--------------------------------------------
 
 
+
+
+
+
 void interfacenews::on_graphebouton_clicked()
 {
-     int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0;
-total ( a,   b,  c,  d,  e,  f,   g,   h );
-
+    clearLayout(ui->graphe);
+int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0;
+    ui->graphe->addWidget(total( a,   b,  c,  d,  e,  f,   g,   h));
 }
 
 
-void interfacenews::total (int a,  int b, int c, int d, int e, int f, int  g,  int h )
+
+
+
+
+
+
+
+
+
+QChartView * interfacenews::total (int a,  int b, int c, int d, int e, int f, int  g,  int h )
 {
     QBarSet *set0 = new QBarSet ("nombres d'articles");
 
@@ -797,8 +830,41 @@ void interfacenews::total (int a,  int b, int c, int d, int e, int f, int  g,  i
     chart->setAxisX(axis, series);
     QChartView *chartview = new QChartView (chart);
 
-    chartview->setParent(ui->graphe);
+   // chartview->setParent(ui->graphe1);
+    chartview->setRenderHint(QPainter::Antialiasing);
+return chartview;
     //*******
 
 }
+
+//*****************
+
+/*
+void clearLayout(QLayout *layout) {
+    if (layout == NULL)
+        return;
+    QLayoutItem *item;
+    while((item = layout->takeAt(0))) {
+        if (item->layout()) {
+            clearLayout(item->layout());
+            delete item->layout();
+        }
+        if (item->widget()) {
+           delete item->widget();
+        }
+        delete item;
+    }
+}*/
+
+
+void interfacenews::clearLayout(QLayout *layout)
+{
+     QLayoutItem *item;
+     while ((item = layout->takeAt(0)))
+         delete item;
+}
+
+
+
+
 
