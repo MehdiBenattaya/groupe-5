@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/icons8-chercher-100.png</file>
+        <file>images/icons8-modifier-100.png</file>
+        <file>images/icons8-plus-2-mathématique-48.png</file>
+        <file>images/icons8-statistiques-100.png</file>
+        <file>images/icons8-supprimer-pour-toujours-100.png</file>
+        <file>images/icons8-visible-48.png</file>
+        <file>images/large (2).png</file>
+        <file>images/Logo final.png</file>
+        <file>images/large (1).png</file>
+        <file>images/large (3).png</file>
+        <file>images/large.png</file>
+        <file>images/Logo.png</file>
+        <file>images/account.png</file>
+        <file>images/user-244.png</file>
+        <file>images/a.png</file>
+        <file>images/ajouter.png</file>
+        <file>images/avion-en-papier.png</file>
+        <file>images/chercher.png</file>
+        <file>images/croix-cercle.png</file>
+        <file>images/document.png</file>
+        <file>images/editer.png</file>
+        <file>images/enveloppe.png</file>
+        <file>images/enveloppe-telechargement.png</file>
+        <file>images/firefox-browser.png</file>
+        <file>images/interdire.png</file>
+        <file>images/liste.png</file>
+        <file>images/play-alt.png</file>
+        <file>images/plus.png</file>
+        <file>images/poubelle.png</file>
+        <file>images/qr-code.png</file>
+        <file>images/rafraichir.png</file>
+        <file>images/reglages.png</file>
+        <file>images/sort-alt.png</file>
+        <file>images/trier-numerique-vers-le-bas (2).png</file>
+        <file>images/thermometre.png</file>
+        <file>images/thermometre-chaud.png</file>
+    </qresource>
+</RCC>
