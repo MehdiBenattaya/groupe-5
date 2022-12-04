@@ -43,6 +43,7 @@ SOURCES += \
     mail.cpp \
     main.cpp \
     mainwindow.cpp \
+    podcast.cpp \
     pub.cpp \
     qrcode.cpp
 
@@ -55,6 +56,7 @@ HEADERS += \
     interfacenews.h \
     mail.h \
     mainwindow.h \
+    podcast.h \
     pub.h \
     qrcode.h
 
