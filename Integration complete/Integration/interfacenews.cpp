@@ -169,6 +169,7 @@ interfacenews::interfacenews(QWidget *parent) :
        }
         QObject::connect(AA.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
         //le slot update_label suite à la reception du signal readyRead (reception des données).
+         QObject::connect(AA.getserial(),SIGNAL(readyRead()),this,SLOT(update_nb()));
    //*******************************
 
 
@@ -2199,6 +2200,29 @@ void interfacenews::on_pushButton_14_clicked()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //zgolli
 
 
@@ -2289,19 +2313,6 @@ void interfacenews::on_pushButton_25_clicked()
 
 
 
-void interfacenews::update_nb()
-{
-
-  data=AA.read_from_arduino();
-
-  if(data== "1"){
-      ui->label_8->setText("mouvement detecté");
-  }
-  else if(data== "0"){
-      ui->label_8->setText("mouvement non detecté");
-      }
-  qDebug()<<"data"<<data;
-}
 
 
 
@@ -2372,3 +2383,18 @@ void interfacenews::on_tab_musique_2_activated(const QModelIndex &index)
 
 }
 
+
+
+void interfacenews::update_nb()
+{
+
+  data=AA.read_from_arduino();
+
+  if(data== "1"){
+      ui->label_73->setText("mouvement detecté");
+  }
+  else if(data== "0"){
+      ui->label_73->setText("mouvement non detecté");
+      }
+  qDebug()<<"data"<<data;
+}

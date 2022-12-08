@@ -31,7 +31,7 @@
 background-color: rgb(0, 85, 127);</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>5</number>
    </property>
    <widget class="QWidget" name="page_5">
     <widget class="QTabWidget" name="TabWidget_login">
@@ -1236,7 +1236,7 @@ border: 0px solid gray;</string>
       <string notr="true">background-color: rgb(0, 85, 127);</string>
      </property>
      <property name="currentIndex">
-      <number>5</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="Ajout">
       <attribute name="icon">
@@ -6081,7 +6081,7 @@ border: 2px solid gray;</string>
        <widget class="QLabel" name="label_72">
         <property name="geometry">
          <rect>
-          <x>480</x>
+          <x>420</x>
           <y>300</y>
           <width>131</width>
           <height>20</height>
@@ -6098,9 +6098,9 @@ color: rgb(255, 255, 255);</string>
        <widget class="QLabel" name="label_73">
         <property name="geometry">
          <rect>
-          <x>630</x>
+          <x>550</x>
           <y>300</y>
-          <width>101</width>
+          <width>181</width>
           <height>21</height>
          </rect>
         </property>
